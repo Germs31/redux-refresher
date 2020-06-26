@@ -19,7 +19,16 @@ function App() {
         <button onClick={() => dispatch(decrement())}>-</button>
       </div>
       <div>
-        <button>Login</button>
+        {
+          !isLoggedIn 
+          ? 
+          <button onClick={() => dispatch(loggedIn())}>Login</button> 
+          : 
+          <div>
+            <p>You are logged in</p>
+            <button onClick={() => dispatch(loggedIn())}>Log Out</button>
+          </div>
+        }
       </div>
     </div>
   );
