@@ -3,7 +3,7 @@ import Counter from './counterReducer';
 import LoggedIn from './isLoggedInReducer';
 
 const JoinedReducers = combineReducers({
-    count: Counter,
+    counter: Counter,
     loggedIn: LoggedIn
 })
 
